@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>Девайс: Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header theme">
       <div class="page-logo container">
-        <a href="index.html" class="page-logo__title">Device</a>
+        <a href="index.html" class="page-logo__text">Device</a>
       </div>
       <div class="user-menu container">
         <div class="container__half">
@@ -15,6 +16,7 @@
             <label class="search__label">
               <input type="search" name="site-search" class="search__input" placeholder="Поиск по сайту">
             </label>
+            <button class="search__btn">Найти</button>
           </form>
         </div>
         <div class="container__half container__half--flex">
@@ -35,7 +37,7 @@
       <div class="container">
         <div class="container__half">
           <div class="page-catalog">
-            <a href="catalog.html" class="page-catalog__link">Каталог товаров</a>
+            <p class="page-catalog__title"><a href="catalog.html" class="page-catalog__link">Каталог товаров</a></p>
             <div class="page-catalog__dropdown">
               <ul class="page-catalog__items">
                 <li class="page-catalog__item">
@@ -81,7 +83,7 @@
 
     <main class="theme">
       <section class="catalog-heading container">
-        <h1 class="catalog-heading__title">Моноподы для селфи</h1>
+        <h1 class="catalog-heading__title theme__title">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
           <li class="breadcrumbs__item"><a href="catalog.html" class="breadcrumbs__link">Каталог товаров</a></li>
@@ -182,7 +184,7 @@
         <section class="flex-half right-half">
           <div class="flex-half__header">
             <div class="flex-half__inner sorting">
-              <h2 class="flex-half__title">Сортировка:</h2>
+              <h2 class="flex-half__title theme__subtitle">Сортировка:</h2>
               <a href="#" class="sorting__filter active">По цене</a>
               <a href="#" class="sorting__filter">По типу</a>
               <a href="#" class="sorting__filter">По популярности</a>
@@ -197,53 +199,53 @@
             <div class="flex-half__inner">
               <figure class="product-card">
                 <div class="product-card__image">
-                  <img src="http://via.placeholder.com/360x380" alt="product" width="360" height="380">
+                  <img src="img/item-1.jpg" width="360" height="380" alt="product">
                   <div class="product-card__hover">
                     <a href="#" class="product-card__btn theme__btn">В корзину</a>
                     <a href="#" class="product-card__link theme__text">К сравнению</a>
                   </div>
                 </div>
                 <figcaption class="product-card__caption">
-                  <h3 class="product-card__title">Любительская селфи-палка</h3>
+                  <p class="product-card__title">Любительская селфи-палка</p>
                   <p class="product-card__price">500 руб.</p>
                 </figcaption>
               </figure>
               <figure class="product-card">
                 <div class="product-card__image">
-                  <img src="http://via.placeholder.com/360x380" alt="product" width="360" height="380">
+                  <img src="img/item-2.jpg" width="360" height="380" alt="product">
                   <div class="product-card__hover">
                     <a href="#" class="product-card__btn theme__btn">В корзину</a>
                     <a href="#" class="product-card__link theme__text">К сравнению</a>
                   </div>
                 </div>
                 <figcaption class="product-card__caption">
-                  <h3 class="product-card__title">Профессиональная селфи-палка</h3>
+                  <p class="product-card__title">Профессиональная селфи-палка</p>
                   <p class="product-card__price">1 500 руб.</p>
                 </figcaption>
               </figure>
               <figure class="product-card">
                 <div class="product-card__image">
-                  <img src="http://via.placeholder.com/360x380" alt="product" width="360" height="380">
+                  <img src="img/item-3.jpg" width="360" height="380" alt="product">
                   <div class="product-card__hover">
                     <a href="#" class="product-card__btn theme__btn">В корзину</a>
                     <a href="#" class="product-card__link theme__text">К сравнению</a>
                   </div>
                 </div>
                 <figcaption class="product-card__caption">
-                  <h3 class="product-card__title">Непотопляемая селфи-палка</h3>
+                  <p class="product-card__title">Непотопляемая селфи-палка</p>
                   <p class="product-card__price">2 500 руб.</p>
                 </figcaption>
               </figure>
               <figure class="product-card product-card--flag-new">
                 <div class="product-card__image">
-                  <img src="http://via.placeholder.com/360x380" alt="product" width="360" height="380">
+                  <img src="img/item-4.jpg" width="360" height="380" alt="product">
                   <div class="product-card__hover">
                     <a href="#" class="product-card__btn theme__btn">В корзину</a>
                     <a href="#" class="product-card__link theme__text">К сравнению</a>
                   </div>
                 </div>
                 <figcaption class="product-card__caption">
-                  <h3 class="product-card__title">Селфи-палка «Следуй за мной»</h3>
+                  <p class="product-card__title">Селфи-палка «Следуй за мной»</p>
                   <p class="product-card__price">4 900 руб.</p>
                 </figcaption>
               </figure>
@@ -266,11 +268,9 @@
       <div class="container">
         <section class="page-footer__left">
           <div class="page-logo">
-            <a href="index.html" class="page-logo__title page-logo__title--footer">Device</a>
+            <a href="index.html" class="page-logo__text page-logo__text--footer">Device</a>
           </div>
-          <p class="page-footer__text theme__text">
-            г. Москва, ул. Строителей, 15
-          </p>
+          <p class="page-footer__text theme__text">г. Москва, ул. Строителей, 15</p>
           <div class="theme__underline theme__underline--yellow"></div>
         </section>
         <section class="page-footer__center">
@@ -312,12 +312,5 @@
         </section>
       </div>
     </footer>
-
-    <div class="popups">
-      <div class="popup feedback theme">
-        <button class="popup__close-btn">X</button>
-
-      </div>
-    </div>
   </body>
 </html>

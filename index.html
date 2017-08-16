@@ -3,11 +3,12 @@
     <head>
       <meta charset="utf-8">
       <title>HTML Academy: Девайс</title>
+      <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
       <header class="page-header theme">
         <div class="page-logo container">
-          <span class="page-logo__title">Device</span>
+          <p class="page-logo__text">Device</p>
         </div>
         <div class="user-menu container">
           <div class="container__half">
@@ -15,6 +16,7 @@
               <label class="search__label">
                 <input type="search" name="site-search" class="search__input" placeholder="Поиск по сайту">
               </label>
+              <button class="search__btn">Найти</button>
             </form>
           </div>
           <div class="container__half container__half--flex">
@@ -34,7 +36,7 @@
         <div class="container">
           <div class="container__half">
             <div class="page-catalog">
-              <a href="catalog.html" class="page-catalog__link">Каталог товаров</a>
+              <p class="page-catalog__title"><a href="catalog.html" class="page-catalog__link">Каталог товаров</a></p>
               <div class="page-catalog__dropdown">
                 <ul class="page-catalog__items">
                   <li class="page-catalog__item">
@@ -103,11 +105,11 @@
             <div class="promo-slider__slides">
               <article class="promo-slide">
                 <div class="promo-slide__image container__half">
-                  <img src="http://via.placeholder.com/250x300" alt="selfie-stick">
+                  <img src="img/slider-1.png" width="384" height="486" alt="selfie-stick">
                 </div>
                 <div class="promo-slide__content container__half">
                   <div class="promo-slide__number">01</div>
-                  <b class="promo-slide__slogan theme__underline theme__underline--white">Делай селфи,<br> как Бен Стиллер!</b>
+                  <h2 class="promo-slide__slogan theme__subtitle theme__underline theme__underline--white">Делай селфи,<br> как Бен Стиллер!</h2>
                   <p class="promo-slide__description">
                     Самая длинная палка для селфи доступна в нашем магазине.<br>
                     Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
@@ -129,7 +131,7 @@
               </article>
               <article class="promo-slide">
                 <div class="promo-slide__image container__half">
-                  <img src="http://via.placeholder.com/250x300" alt="fitness-gadget">
+                  <img src="img/slider-2.png" width="345" height="485" alt="fitness-gadget">
                 </div>
                 <div class="promo-slide__content container__half">
                   <div class="promo-slide__number">02</div>
@@ -151,7 +153,7 @@
               </article>
               <article class="promo-slide">
                 <div class="promo-slide__image container__half">
-                  <img src="http://via.placeholder.com/250x300" alt="quadrocopter">
+                  <img src="img/slider-3.png" width="526" height="334" alt="quadrocopter">
                 </div>
                 <div class="promo-slide__content container__half">
                   <div class="promo-slide__number">03</div>
@@ -263,22 +265,22 @@
         <section class="logotypes container">
           <div class="logotypes__item">
             <a href="#" class="logotypes__link">
-              <img src="http://via.placeholder.com/260x100" alt="logotype">
+              <img src="img/partners/logo-1.png" width="260" height="100" alt="logotype">
             </a>
           </div>
           <div class="logotypes__item">
             <a href="#" class="logotypes__link">
-              <img src="http://via.placeholder.com/260x100" alt="logotype">
+              <img src="img/partners/logo-2.png" width="260" height="100" alt="logotype">
             </a>
           </div>
           <div class="logotypes__item">
             <a href="#" class="logotypes__link">
-              <img src="http://via.placeholder.com/260x100" alt="logotype">
+              <img src="img/partners/logo-3.png" width="260" height="100" alt="logotype">
             </a>
           </div>
           <div class="logotypes__item">
             <a href="#" class="logotypes__link">
-              <img src="http://via.placeholder.com/260x100" alt="logotype">
+              <img src="img/partners/logo-4.png" width="260" height="100" alt="logotype">
             </a>
           </div>
         </section>
@@ -308,7 +310,7 @@
               <p class="theme__text">
                 Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
               </p>
-              <a class="contacts__map-preview"><img src="http://via.placeholder.com/560x222" alt="map-preview"></a>
+              <a class="contacts__map-preview"><img src="img/map-preveiw.png" width="560" height="222" alt="map-preview"></a>
               <a href="#" class="contacts__btn theme__btn">Напишите нам</a>
             </section>
           </div>
@@ -319,7 +321,7 @@
         <div class="container">
           <section class="page-footer__left">
             <div class="page-logo">
-              <span class="page-logo__title page-logo__title--footer">Device</span>
+              <span class="page-logo__text page-logo__text--footer">Device</span>
             </div>
             <p class="page-footer__text theme__text">
               г. Москва, ул. Строителей, 15
@@ -370,7 +372,7 @@
         <div class="popup map">
           <button class="popup__close-btn">X</button>
           <div class="map__image">
-            <a href="#" class="map__link"><img src="http://via.placeholder.com/960x560" alt="map"></a>
+            <a href="#" class="map__link"><img src="img/map-big.png" width="960" height="559" alt="map"></a>
           </div>
         </div>
 
