@@ -4,12 +4,14 @@ body,
   padding: 0;
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
-  line-height: 30px;
-  color: #333333;
+  line-height: 2;
+  color: #333;
 }
 
-.theme__subtitle {
+.theme__title {
   font-family: "Gilroy ExtraBold", "Arial Black", sans-serif;
   font-size: 47px;
-  letter-spacing: 10;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #000;
 }
