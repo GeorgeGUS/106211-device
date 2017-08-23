@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="page-header theme">
-      <div class="page-logo container">
+      <div class="page-logo page-logo--header container">
         <div class="page-header__wrapper">
           <a href="index.html" class="page-logo__link">
             <svg class="page-logo__image"
@@ -88,7 +88,7 @@
               </li>
             </ul>
           </div>
-      </nav>
+        </div></nav>
     </header>
 
     <main class="catalog theme">
@@ -116,55 +116,88 @@
               <form action="http://echo.htmlacademy.ru" class="filter">
                 <fieldset class="filter__group">
                   <legend class="filter__title">Стоимость</legend>
+
+
                   <div class="price-range">
                     <div class="price-range__scale">
-                      <div class="price-range__bar"></div>
-                    </div>
-                    <div class="price-range__grip price-range__grip--min">
-                      <label class="price-range__label">
-                        От <input class="price-range__value price-range__value--min"
-                                  name="min-price" type="text" value="0">
-                      </label>
-                    </div>
-                    <div class="price-range__grip price-range__grip--max">
-                      <label class="price-range__label">
-                        До <input class="price-range__value price-range__value--max"
-                                  name="max-price" type="text" value="5000">
-                      </label>
+                      <div class="price-range__bar">
+                        <div class="price-range__grip price-range__grip--min">
+                          <label class="price-range__label">
+                            <span class="price-range__label-text">от 0</span>
+                            <!--<input class="price-range__value"
+                            name="min-price" type="number" value="0">-->
+                          </label>
+                        </div>
+                        <div class="price-range__grip price-range__grip--max">
+                          <label class="price-range__label">
+                            <span class="price-range__label-text">до 5000</span>
+                            <!--<input class="price-range__value"
+                            name="max-price" type="text" value="5000">-->
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
+
+
+                  <!--<div class="price-range">
+                    <div class="price-range__scale">
+                      <div class="price-range__bar">
+
+                      </div>
+                    </div>
+                    <div class="price-range__grip price-range__grip&#45;&#45;min">
+                      <label class="price-range__label">
+                        <span class="price-range__label-text">от 0</span>
+                        &lt;!&ndash;<input class="price-range__value price-range__value&#45;&#45;min"&ndash;&gt;
+                        &lt;!&ndash;name="min-price" type="text" value="0">&ndash;&gt;
+                      </label>
+                    </div>
+                    <div class="price-range__grip price-range__grip&#45;&#45;max">
+                      <label class="price-range__label">
+                        <span class="price-range__label-text">до 5000</span>
+                        &lt;!&ndash;<input class="price-range__value"&ndash;&gt;
+                        &lt;!&ndash;name="max-price" type="text" value="5000">&ndash;&gt;
+                      </label>
+                    </div>
+                  </div>-->
                 </fieldset>
                 <fieldset class="filter__group">
                   <legend class="filter__title">Цвет</legend>
                   <ul class="filter__list">
                     <li class="filter__item">
-                      <label class="filter__label">
+                      <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-black" value="black" checked
-                               class="filter__input filter__input--check">Черный
+                               class="filter__input">
+                        <span class="filter__label filter__label--check">Черный</span>
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__label">
+                      <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-white" value="white"
-                               class="filter__input filter__input--check">Белый
+                               class="filter__input">
+                        <span class="filter__label filter__label--check">Белый</span>
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__label">
+                      <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-blue" value="blue" checked
-                               class="filter__input filter__input--check">Синий
+                               class="filter__input">
+                        <span class="filter__label filter__label--check">Синий</span>
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__label">
+                      <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-red" value="red" checked
-                               class="filter__input filter__input--check">Красный
+                               class="filter__input">
+                        <span class="filter__label filter__label--check">Красный</span>
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__label">
+                      <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-pink" value="pink"
-                               class="filter__input filter__input--check">Розовый
+                               class="filter__input">
+                        <span class="filter__label filter__label--check">Розовый</span>
                       </label>
                     </li>
                   </ul>
@@ -173,15 +206,17 @@
                   <legend class="filter__title">Bluetooth</legend>
                   <ul class="filter__list">
                     <li class="filter__item">
-                      <label class="filter__label">
+                      <label class="filter__label-wrapper">
                         <input type="radio" name="Bluetooth" value="yes" checked
-                               class="filter__input filter__input--radio">Есть
+                               class="filter__input">
+                        <span class="filter__label filter__label--radio">Есть</span>
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__label">
+                      <label class="filter__label-wrapper">
                         <input type="radio" name="Bluetooth" value="no"
-                               class="filter__input filter__input--radio">Нет
+                               class="filter__input">
+                        <span class="filter__label filter__label--radio">Нет</span>
                       </label>
                     </li>
                   </ul>
@@ -279,49 +314,55 @@
     <footer class="page-footer theme">
       <div class="page-footer__wrapper container">
         <section class="page-footer__left theme__divider theme__divider--after">
-          <div class="page-logo theme__title">
+          <div class="page-logo page-logo--footer">
             <a href="index.html" class="page-logo__link">
-              <svg class="page-logo__image"
+              <svg class="page-logo__image page-logo__image--footer"
                    width="164px" height="36px">
                 <path fill-rule="evenodd"
                       d="M163.881,27.119 L163.881,34.511 L142.617,34.511 L142.617,0.911 L163.639,0.911 L163.639,8.303 L150.349,8.303 L150.349,13.871 L162.431,13.871 L162.431,21.167 L150.349,21.167 L150.349,27.119 L163.881,27.119 ZM124.010,27.695 C125.717,27.695 127.272,27.327 128.674,26.591 C130.075,25.855 131.130,24.847 131.839,23.567 L138.509,27.407 C137.059,29.807 135.045,31.703 132.468,33.095 C129.889,34.487 127.071,35.183 124.010,35.183 C118.951,35.183 114.755,33.511 111.420,30.167 C108.086,26.823 106.418,22.671 106.418,17.711 C106.418,12.751 108.086,8.599 111.420,5.255 C114.755,1.911 118.951,0.239 124.010,0.239 C127.038,0.239 129.841,0.935 132.419,2.327 C134.996,3.719 137.026,5.615 138.509,8.015 L131.839,11.855 C131.098,10.543 130.034,9.527 128.650,8.807 C127.264,8.087 125.717,7.727 124.010,7.727 C121.014,7.727 118.621,8.639 116.833,10.463 C115.045,12.287 114.151,14.703 114.151,17.711 C114.151,20.719 115.045,23.135 116.833,24.959 C118.621,26.783 121.014,27.695 124.010,27.695 ZM93.853,0.911 L101.586,0.911 L101.586,34.511 L93.853,34.511 L93.853,0.911 ZM69.593,34.511 L58.574,0.911 L67.031,0.911 L74.522,25.631 L82.013,0.911 L90.471,0.911 L79.452,34.511 L69.593,34.511 ZM35.376,0.911 L56.399,0.911 L56.399,8.303 L43.109,8.303 L43.109,13.871 L55.191,13.871 L55.191,21.167 L43.109,21.167 L43.109,27.119 L56.641,27.119 L56.641,34.511 L35.376,34.511 L35.376,0.911 ZM14.112,34.511 L0.580,34.511 L0.580,0.911 L14.112,0.911 C18.783,0.911 22.690,2.519 25.832,5.735 C28.973,8.951 30.544,12.943 30.544,17.711 C30.544,22.479 28.973,26.471 25.832,29.687 C22.690,32.903 18.783,34.511 14.112,34.511 ZM20.612,10.871 C18.952,9.159 16.786,8.303 14.112,8.303 L8.313,8.303 L8.313,27.119 L14.112,27.119 C16.786,27.119 18.952,26.263 20.612,24.551 C22.271,22.839 23.101,20.559 23.101,17.711 C23.101,14.863 22.271,12.583 20.612,10.871 Z"/>
               </svg>
             </a>
           </div>
-          <p class="theme__text">г. Москва, ул. Строителей, 15</p>
+          <p class="page-footer__text theme__text">г. Москва, ул. Строителей, 15</p>
         </section>
         <section class="page-footer__center">
           <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item"><a href="#" class="main-nav__link">Доставка</a></li>
-              <li class="main-nav__item"><a href="#" class="main-nav__link">Гарантия</a></li>
-              <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
+            <ul class="main-nav__list theme__list">
+              <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--footer">Доставка</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--footer">Гарантия</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--footer">Контакты</a></li>
             </ul>
           </nav>
           <div class="socials">
-            <ul class="socials__list">
-              <li class="socials__item"><a href="#" class="socials__link">Facebook</a></li>
-              <li class="socials__item"><a href="#" class="socials__link">Instagram</a></li>
-              <li class="socials__item"><a href="#" class="socials__link">Twitter</a></li>
+            <ul class="socials__list theme__list">
+              <li class="socials__item">
+                <a href="#" class="socials__link socials__link--fb">Facebook</a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link socials__link--inst">Instagram</a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link socials__link--tw">Twitter</a>
+              </li>
             </ul>
           </div>
         </section>
         <section class="page-footer__right">
           <div class="user-menu">
-            <ul class="user-menu__list">
+            <ul class="user-menu__list theme__list">
               <li class="user-menu__item">
-                <a href="#" class="user-menu__link user-menu__link--login-form">Выйти</a>
+                <a href="#" class="user-menu__link user-menu__link--user page-footer__link">Выйти</a>
               </li>
               <li class="user-menu__item">
-                <a href="#" class="user-menu__link user-menu__link--compare">Сравнить</a>
+                <a href="#" class="user-menu__link user-menu__link--compare page-footer__link">Сравнить</a>
               </li>
               <li class="user-menu__item">
-                <a href="#" class="user-menu__link user-menu__link--cart">Корзина</a>
+                <a href="#" class="user-menu__link user-menu__link--cart page-footer__link">Корзина</a>
               </li>
             </ul>
           </div>
-          <p class="theme__text">Тел.: +7 (495) 495-95-95</p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="page-footer__logo-academy">HTML Academy</a>
+          <p class="page-footer__text theme__text">Тел.: +7 (495) 495-95-95</p>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="page-footer__logo-academy page-footer__link">HTML Academy</a>
         </section>
       </div>
     </footer>
