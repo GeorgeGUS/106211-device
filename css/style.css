@@ -154,10 +154,11 @@ a {
 
 .theme__btn {
   display: inline-block;
-  margin: 20px 0;
   position: relative;
-  min-width: 160px;
+  z-index: 0;
+  margin: 20px 0;
   padding: 10px 20px;
+  min-width: 160px;
   font-family: "Gilroy ExtraBold", "Arial Black", sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -168,8 +169,6 @@ a {
   border: none;
   background-color: transparent;
   transition: all 0.2s ease;
-  outline: none;
-  z-index: 0;
   cursor: pointer;
 }
 
@@ -180,7 +179,6 @@ a {
   text-align: center;
 }
 
-
 .theme__btn::before {
   content: "";
   position: absolute;
@@ -190,7 +188,6 @@ a {
   width: 100%;
   height: 8px;
   background-color: #f0c52e;
-  /*background-color: #f7e296; TODO: уточнить цвет кнопки */
   z-index: -1;
   transition: all 0.2s ease;
 }
@@ -272,58 +269,88 @@ a {
 .user-menu__search-label {
   order: 0;
   flex-grow: 1;
-  padding-left: 40px;
+  display: inline-block;
+  /*width: 20px;*/
+  line-height: 50px;
+  padding: 20px 10px;
   background-image: url("../img/svg/search.svg");
   background-position: center left;
   background-repeat: no-repeat;
   border-bottom: 2px solid transparent;
 }
 
+
+/*TODO: поправить в Ишаке смещение от центра*/
 .user-menu__search-input {
+  display: inline-block;
+  vertical-align: middle;
   order: 1;
+  padding: 5px 20px;
   width: 100%;
   font: inherit;
-  color: rgba(0, 0, 0, 0.3);
+  line-height: 40px;
   background: none;
   border: none;
+  border-bottom: 2px solid transparent;
   outline: none;
 }
 
-/*TODO Доделать нормальное поведение поля поиска при переходе фокуса на кнопку*/
-/*.user-menu__search-input:focus,*/
-/*.user-menu__search-input:active,*/
-/*.user-menu__search-input:focus ~ .user-menu__search-label,*/
-/*.user-menu__search-btn:focus ~ .user-menu__search-label,*/
-/*.user-menu__search-input:active ~ .user-menu__search-label*/
-.user-menu__search-btn:focus .user-menu__search .user-menu__search-label {
-  border-bottom: 2px solid #000;
+.user-menu__search-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.user-menu__search-input:hover {
+.user-menu__search-input:hover::placeholder {
   color: rgba(0, 0, 0, 0.6);
+}
+
+.user-menu__search-input:active::placeholder,
+.user-menu__search-input:focus::placeholder {
+  color: #000000;
+}
+
+/*TODO Доделать нормальное поведение поля поиска при переходе фокуса на кнопку*/
+.user-menu__search-input:focus,
+.user-menu__search-input:active,
+.user-menu__search-label:active,
+.user-menu__search-input:focus ~ .user-menu__search-label,
+.user-menu__search-btn:focus .user-menu__search .user-menu__search-label {
+  border-bottom: 2px solid #000;
+
 }
 
 .user-menu__search-btn {
   order: 2;
-  width: 85px;
-  min-height: 50px;
-  font: inherit;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  font-size: 0;
   color: #000;
   background-color: transparent;
-  border: 2px solid #000;
+  border: 0;
   box-sizing: border-box;
-  /*visibility: hidden;*/
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .user-menu__search-input:focus ~ .user-menu__search-btn,
 .user-menu__search-input:active ~ .user-menu__search-btn,
-.user-menu__search-btn:focus ~ .user-menu__search-btn {
-  visibility: visible;
+.user-menu__search-btn:hover,
+.user-menu__search-btn:active,
+.user-menu__search-btn:focus {
+  padding: 10px 20px;
+  width: auto;
+  height: auto;
+  font: inherit;
+  line-height: 30px;
+  border: 2px solid #000;
+  clip: auto;
+  overflow: visible;
+  outline: none;
 }
 
 
-.user-menu__search-btn:hover,
-.user-menu__search-btn:focus {
+.user-menu__search-btn:focus,
+.user-menu__search-btn:hover {
   color: #fff;
   background-color: #000;
   outline: none;
@@ -336,7 +363,10 @@ a {
 /*=========================================================*/
 /* Меню пользователя */
 
-.user-menu__list { flex-grow: 1; }
+.user-menu__list {
+  flex-grow: 1;
+  margin: 20px 0;
+}
 
 .user-menu__sublist {
   display: flex;
@@ -355,8 +385,7 @@ a {
   line-height: 36px;
 }
 
-.user-menu__link:hover,
-.user-menu__link:focus {
+.user-menu__link:hover {
   opacity: 0.6;
 }
 
@@ -364,31 +393,15 @@ a {
   opacity: 0.3;
 }
 
-.user-menu__link::before {
-  content: "";
-  display: inline-flex;
-  vertical-align: baseline;
-  width: 30px;
-  height: 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
+.user-menu__icon {
+  margin-right: 10px;
+  width: 15px;
+  height: 13px;
+  fill: #000000;
 }
 
-.user-menu__link--user::before {
-  background-image: url("../img/svg/user.svg");
-}
-
-.user-menu__link--compare::before {
-  background-image: url("../img/svg/compare.svg");
-}
-
-.user-menu__link--cart::before {
-  background-image: url("../img/svg/cart.svg");
-}
-
-.user-menu__link--logout::before {
-  width: 20px;
+.user-menu__link--logout {
+  margin-left: 20px;
 }
 
 /*=========================================================*/
@@ -396,7 +409,6 @@ a {
 
 .main-nav {
   position: relative;
-  padding-bottom: 40px;
 }
 
 .main-nav__list {
@@ -418,6 +430,11 @@ a {
 .main-nav__item:last-child {
   margin-right: 0;
   margin-left: auto;
+}
+
+.catalog {
+
+  padding-bottom: 40px;
 }
 
 .catalog__link {
@@ -473,8 +490,6 @@ a {
   min-width: 160px;
   list-style: none;
 }
-
-/*TODO: придумать, как делать выпадающее меню видимым при переводе на него фокуса*/
 
 .catalog__title:hover .dropdown,
 .catalog__title .catalog__link:focus ~ .dropdown {
@@ -646,8 +661,8 @@ a {
   line-height: 20px;
 }
 
-.thumbnails__link:active .thumbnails__image,
-.thumbnails__link:active .thumbnails__title {
+/*TODO: Разобраться, почему не работает .thumbnails__link:active  в IE*/
+.thumbnails__link:active {
   opacity: 0.3;
 }
 
@@ -771,35 +786,20 @@ a {
   justify-content: space-between;
 }
 
-.logotypes__item {
-
-}
-
 .logotypes__link {
-  position: relative;
   display: block;
 }
 
-.logotypes__link::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.logotypes__link img {
-  vertical-align: bottom;
-  filter: grayscale(100%); /*TODO: заменить фильтр на кроссбраузерный аналог*/
+.logotypes__link svg image {
   opacity: 0.5;
+  filter: url("#grayscale");
   transition: all 0.3s ease;
 }
 
-.logotypes__link:hover img,
-.logotypes__link:active img {
-  filter: grayscale(0);
+.logotypes__link svg image:hover,
+.logotypes__link svg image:active {
   opacity: 1;
+  filter: none;
 }
 
 /*=========================================================*/
@@ -1303,16 +1303,13 @@ a {
 
 .page-footer__wrapper {
   display: flex;
-  justify-content: space-between;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
 .page-footer__text {
+  padding: 15px 0;
   color: #ffffff;
-}
-
-.page-footer__link {
-  color: #f0c52e;
 }
 
   /*=========================================================*/
@@ -1321,8 +1318,14 @@ a {
 .page-footer__left,
 .page-footer__center,
 .page-footer__right {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+}
+
+.page-footer__left,
+.page-footer__right {
+  width: 360px;
 }
 
 .page-logo__image--footer {
@@ -1330,7 +1333,7 @@ a {
 }
 
 .page-footer__left.theme__divider--after::after {
-  margin-top: auto;
+  margin-top: 60px;
   background-color: #f0c52e;
 }
 
@@ -1338,14 +1341,28 @@ a {
 /* Средняя часть подвала */
 
 .page-footer__center {
+  margin-top: 76px;
   align-items: center;
+}
+
+.main-nav__link {
+  line-height: 30px;
 }
 
 .main-nav__link--footer {
   font-size: 18px;
+  line-height: 30px;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 4px;
+}
+
+.socials {
+  margin-top: auto;
+}
+
+.socials__list {
+  margin-bottom: 0;
 }
 
 .socials__item:not(:last-child) {
@@ -1386,4 +1403,35 @@ a {
 
 .page-footer__right {
   align-items: flex-end;
+}
+
+.page-footer__right .user-menu__item {
+  margin-left: 30px;
+}
+
+.page-footer__right .user-menu__link {
+  color: #ffffff;
+}
+
+.page-footer__right .user-menu__icon {
+  fill: #ffc600;
+}
+
+.page-footer__logo-academy {
+  margin-top: auto;
+  width: 27px;
+  height: 34px;
+  font-size: 0;
+  background-image: url("../img/svg/logo-html.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.page-footer__logo-academy:hover {
+  opacity: 0.6;
+}
+
+.page-footer__logo-academy:active {
+  opacity: 0.3;
 }
