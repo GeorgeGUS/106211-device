@@ -260,6 +260,7 @@ a {
 .user-menu__search {
   flex-grow: 1;
   display: flex;
+  align-items: stretch;
   margin-right: 60px;
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
@@ -270,32 +271,30 @@ a {
   order: 0;
   flex-grow: 1;
   display: inline-block;
-  /*width: 20px;*/
-  line-height: 50px;
-  padding: 20px 10px;
+  padding: 5px 10px;
   background-image: url("../img/svg/search.svg");
   background-position: center left;
   background-repeat: no-repeat;
   border-bottom: 2px solid transparent;
 }
 
-
-/*TODO: поправить в Ишаке смещение от центра*/
 .user-menu__search-input {
   display: inline-block;
-  vertical-align: middle;
   order: 1;
-  padding: 5px 20px;
+  padding: 5px 10px;
   width: 100%;
   font: inherit;
-  line-height: 40px;
+  line-height: 20px;
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
   outline: none;
 }
-
+.user-menu__search-input:-ms-input-placeholder,
 .user-menu__search-input::placeholder {
+  font-size: inherit;
+  line-height: 25px;
+  vertical-align: middle;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -308,7 +307,6 @@ a {
   color: #000000;
 }
 
-/*TODO Доделать нормальное поведение поля поиска при переходе фокуса на кнопку*/
 .user-menu__search-input:focus,
 .user-menu__search-input:active,
 .user-menu__search-label:active,
@@ -365,7 +363,7 @@ a {
 
 .user-menu__list {
   flex-grow: 1;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .user-menu__sublist {
@@ -433,8 +431,11 @@ a {
 }
 
 .catalog {
-
   padding-bottom: 40px;
+}
+
+.catalog__title {
+  line-height: normal;
 }
 
 .catalog__link {
@@ -1398,7 +1399,7 @@ a {
   background-image: url("../img/svg/social-tw.svg");
 }
 
-  /*=========================================================*/
+/*=========================================================*/
 /* Правая часть подвала */
 
 .page-footer__right {
@@ -1434,4 +1435,139 @@ a {
 
 .page-footer__logo-academy:active {
   opacity: 0.3;
+}
+
+/*=========================================================*/
+/* =================== МОДАЛЬНЫЕ ОКНА ==================== */
+/*=========================================================*/
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.popup__item {
+  position: relative;
+  display: block;
+  width: 960px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popup__item.hidden {
+  display: none;
+}
+
+.popup__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url("../img/svg/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.popup__close-btn:hover,
+.popup__close-btn:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.popup__close-btn:active {
+  opacity: 0.3;
+}
+
+/*=========================================================*/
+/* Карта */
+
+.map {
+  position: relative;
+  height: 559px;
+  background-image: url("../img/map-big.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.map__iframe {
+  border: 0;
+}
+
+/*=========================================================*/
+/* Форма обратной связи */
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 100px;
+  box-sizing: border-box;
+}
+
+.feedback__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback__half {
+  width: 360px;
+}
+
+.feedback__label {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.feedback__input {
+  margin-bottom: 30px;
+  padding: 13px 20px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: rgba(229, 229, 229, 0.5);
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.feedback__input::placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.feedback__input:hover {
+  background-color: rgba(229, 229, 229, 0.8);
+}
+
+.feedback__input:focus {
+  background-color: transparent;
+  border-color: #f7e296;
+}
+
+.feedback__input:invalid {
+  background-color: #f6dada;
+  border-color: #f6dada;
+}
+
+.feedback__input--textarea {
+  margin-bottom: 40px;
+  resize: none;
+}
+
+.feedback__send-btn {
+  align-self: flex-start;
+  margin: 0;
+  min-width: 200px;
 }
