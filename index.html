@@ -28,21 +28,21 @@
             <ul class="user-menu__list theme__list">
               <li class="user-menu__item">
                 <a href="#" class="user-menu__link">
-                  <svg class="user-menu__icon" width="13" height="12">
+                  <svg class="user-menu__icon user-menu__icon--user" width="13" height="12">
                     <use xlink:href="#user"></use>
                   </svg>
                   Войти</a>
               </li>
               <li class="user-menu__item">
                 <a href="#" class="user-menu__link">
-                  <svg class="user-menu__icon" width="10" height="10">
+                  <svg class="user-menu__icon user-menu__icon--compare" width="10" height="10">
                     <use xlink:href="#compare"></use>
                   </svg>
                   Сравнить</a>
               </li>
               <li class="user-menu__item">
                 <a href="#" class="user-menu__link">
-                  <svg class="user-menu__icon" width="12" height="12">
+                  <svg class="user-menu__icon user-menu__icon--cart" width="12" height="12">
                     <use xlink:href="#cart"></use>
                   </svg>
                   Корзина</a>
@@ -54,9 +54,9 @@
       <nav class="main-nav container">
         <div class="page-header__wrapper">
           <div class="main-nav__item container__half">
-            <ul class="catalog theme__list">
-              <li class="catalog__title theme__alt-title">
-                <a href="catalog.html" class="catalog__link">Каталог товаров</a>
+            <ul class="main-nav__list theme__list">
+              <li class="main-nav__item main-nav__item--catalog">
+                <a href="catalog.html" class="main-nav__link main-nav__link--catalog theme__alt-title">Каталог товаров</a>
                 <ul class="dropdown theme__list theme__text page-header__wrapper">
                   <li class="dropdown__col">
                     <ul class="dropdown__row">
@@ -81,15 +81,15 @@
             </ul>
           </div>
           <div class="main-nav__item container__half">
-            <ul class="main-nav__list theme__list theme__alt-title">
+            <ul class="main-nav__list theme__list">
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Доставка</a>
+                <a href="#" class="main-nav__link theme__alt-title">Доставка</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Гарантия</a>
+                <a href="#" class="main-nav__link theme__alt-title">Гарантия</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Контакты</a>
+                <a href="#" class="main-nav__link theme__alt-title">Контакты</a>
               </li>
             </ul>
           </div>
@@ -117,7 +117,7 @@
             <div class="slide__content container__half theme__divider">
               <span class="slide__number">01</span>
               <p class="slide__slogan theme__title">
-                <strong>Делай селфи,<br> как Бен Стиллер!</strong>
+                <b>Делай селфи,<br> как Бен Стиллер!</b>
               </p>
               <p class="slide__description theme__text">
                 Самая длинная палка для селфи доступна в нашем магазине.<br>
@@ -159,7 +159,7 @@
             <div class="slide__content container__half theme__divider">
               <span class="slide__number">02</span>
               <p class="slide__slogan theme__title">
-                <strong>Худеем<br> правильно!</strong>
+                <b>Худеем<br> правильно!</b>
               </p>
               <p class="slide__description theme__text">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
@@ -197,7 +197,7 @@
             <div class="slide__content container__half theme__divider">
               <span class="slide__number">03</span>
               <p class="slide__slogan theme__title">
-                <strong>Порхает как бабочка, жалит как пчела!</strong>
+                <b>Порхает как бабочка,<br> жалит как пчела!</b>
               </p>
               <p class="slide__description theme__text">
                 Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
@@ -240,37 +240,49 @@
         <ul class="thumbnails__list theme__list">
           <li class="thumbnails__item">
             <a href="#" class="thumbnails__link">
-              <div class="thumbnails__image thumbnails__image-1"></div>
-              <h3 class="thumbnails__title">Виртуальная<br> реальность</h3>
+              <div class="thumbnails__background">
+                <div class="thumbnails__image thumbnails__image-1"></div>
+              </div>
+              <h3 class="thumbnails__title">Виртуальная реальность</h3>
             </a>
           </li>
           <li class="thumbnails__item">
             <a href="#" class="thumbnails__link">
-              <div class="thumbnails__image thumbnails__image-2"></div>
+              <div class="thumbnails__background">
+                <div class="thumbnails__image thumbnails__image-2"></div>
+              </div>
               <h3 class="thumbnails__title">Моноподы<br> для селфи</h3>
             </a>
           </li>
           <li class="thumbnails__item">
             <a href="#" class="thumbnails__link">
-              <div class="thumbnails__image thumbnails__image-3"></div>
+              <div class="thumbnails__background">
+                <div class="thumbnails__image thumbnails__image-3"></div>
+              </div>
               <h3 class="thumbnails__title">Экшн-камеры</h3>
             </a>
           </li>
           <li class="thumbnails__item">
             <a href="#" class="thumbnails__link">
-              <div class="thumbnails__image thumbnails__image-4"></div>
-              <h3 class="thumbnails__title">Фитнес<br> браслеты</h3>
+              <div class="thumbnails__background">
+                <div class="thumbnails__image thumbnails__image-4"></div>
+              </div>
+              <h3 class="thumbnails__title">Фитнес-<br> браслеты</h3>
             </a>
           </li>
           <li class="thumbnails__item">
             <a href="#" class="thumbnails__link">
-              <div class="thumbnails__image thumbnails__image-5"></div>
+              <div class="thumbnails__background">
+                <div class="thumbnails__image thumbnails__image-5"></div>
+              </div>
               <h3 class="thumbnails__title">Умные часы</h3>
             </a>
           </li>
           <li class="thumbnails__item">
             <a href="#" class="thumbnails__link">
-              <div class="thumbnails__image thumbnails__image-6"></div>
+              <div class="thumbnails__background">
+                <div class="thumbnails__image thumbnails__image-6"></div>
+              </div>
               <h3 class="thumbnails__title">Квадрокоптеры</h3>
             </a>
           </li>
@@ -330,7 +342,7 @@
             <a href="#" class="logotypes__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="260" height="100" viewBox="0 0 260 100">
                 <desc>DJI</desc>
-                <use xlink:href="#grayscale" x="0" y="0" />
+                <use xlink:href="#grayscale" x="0" y="0"/>
                 <image xlink:href="img/partners/logo-1.png" x="0" y="0" height="100%" width="100%"/>
               </svg>
             </a>
@@ -338,17 +350,8 @@
           <li class="logotypes__item">
             <a href="#" class="logotypes__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="260" height="100" viewBox="0 0 260 100">
-                <desc>GoPro</desc>
-                <use xlink:href="#grayscale" x="0" y="0" />
-                <image xlink:href="img/partners/logo-2.png" x="0" y="0" height="100%" width="100%"/>
-              </svg>
-            </a>
-          </li>
-          <li class="logotypes__item">
-            <a href="#" class="logotypes__link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="260" height="100" viewBox="0 0 260 100">
                 <desc>SP Gadgets</desc>
-                <use xlink:href="#grayscale" x="0" y="0" />
+                <use xlink:href="#grayscale" x="0" y="0"/>
                 <image xlink:href="img/partners/logo-3.png" x="0" y="0" height="100%" width="100%"/>
               </svg>
             </a>
@@ -356,8 +359,17 @@
           <li class="logotypes__item">
             <a href="#" class="logotypes__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="260" height="100" viewBox="0 0 260 100">
+                <desc>GoPro</desc>
+                <use xlink:href="#grayscale" x="0" y="0"/>
+                <image xlink:href="img/partners/logo-2.png" x="0" y="0" height="100%" width="100%"/>
+              </svg>
+            </a>
+          </li>
+          <li class="logotypes__item">
+            <a href="#" class="logotypes__link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="260" height="100" viewBox="0 0 260 100">
                 <desc>VIVE</desc>
-                <use xlink:href="#grayscale" x="0" y="0" />
+                <use xlink:href="#grayscale" x="0" y="0"/>
                 <image xlink:href="img/partners/logo-4.png" x="0" y="0" height="100%" width="100%"/>
               </svg>
             </a>
@@ -387,7 +399,7 @@
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
           </p>
           <div class="contacts__map">
-            <a href="#" class="contacts__map-link">
+            <a href="https://goo.gl/maps/xwZiqdGoRc32" class="contacts__map-link">
               <img src="img/map-preview.png" width="560" height="222" alt="map-preview">
             </a>
           </div>
@@ -397,21 +409,58 @@
     </main>
 
     <footer class="page-footer theme">
-      <div class="page-footer__wrapper container">
-        <section class="page-footer__left theme__divider theme__divider--after">
+      <div class="page-footer__wrapper container  container--flex">
+        <div class="container__half">
           <div class="page-logo">
             <svg class="page-logo__image page-logo__image--footer" width="164px" height="36px">
               <use xlink:href="#page-logo" x="0" y="0"></use>
             </svg>
           </div>
+        </div>
+        <div class="container__half">
+          <div class="user-menu">
+            <ul class="user-menu__list theme__list">
+              <li class="user-menu__item">
+                <a href="#" class="user-menu__link">
+                  <svg class="user-menu__icon user-menu__icon--user" width="13" height="12">
+                    <use xlink:href="#user"></use>
+                  </svg>
+                  Войти</a>
+              </li>
+              <li class="user-menu__item">
+                <a href="#" class="user-menu__link">
+                  <svg class="user-menu__icon user-menu__icon--compare" width="10" height="10">
+                    <use xlink:href="#compare"></use>
+                  </svg>
+                  Сравнить</a>
+              </li>
+              <li class="user-menu__item">
+                <a href="#" class="user-menu__link">
+                  <svg class="user-menu__icon user-menu__icon--cart" width="12" height="12">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                  Корзина</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__wrapper container">
+        <section class="page-footer__left theme__divider theme__divider--after">
           <p class="page-footer__text theme__text">г. Москва, ул. Строителей, 15</p>
         </section>
         <section class="page-footer__center">
           <nav class="main-nav">
             <ul class="main-nav__list theme__list">
-              <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--footer">Доставка</a></li>
-              <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--footer">Гарантия</a></li>
-              <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--footer">Контакты</a></li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link theme__alt-title">Доставка</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link theme__alt-title">Гарантия</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link theme__alt-title">Контакты</a>
+              </li>
             </ul>
           </nav>
           <div class="socials">
@@ -429,31 +478,6 @@
           </div>
         </section>
         <section class="page-footer__right">
-          <div class="user-menu">
-            <ul class="user-menu__list theme__list">
-              <li class="user-menu__item">
-                <a href="#" class="user-menu__link">
-                  <svg class="user-menu__icon" width="13" height="12">
-                    <use xlink:href="#user"></use>
-                  </svg>
-                  Войти</a>
-              </li>
-              <li class="user-menu__item">
-                <a href="#" class="user-menu__link">
-                  <svg class="user-menu__icon" width="10" height="10">
-                    <use xlink:href="#compare"></use>
-                  </svg>
-                  Сравнить</a>
-              </li>
-              <li class="user-menu__item">
-                <a href="#" class="user-menu__link">
-                  <svg class="user-menu__icon" width="12" height="12">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                  Корзина</a>
-              </li>
-            </ul>
-          </div>
           <p class="page-footer__text theme__text">Тел.: +7 (495) 495-95-95</p>
           <a href="https://htmlacademy.ru/intensive/htmlcss"
              class="page-footer__logo-academy">HTML Academy</a>
@@ -500,7 +524,7 @@
           </defs>
         </symbol>
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg">
+      <svg xmlns="http://www.w3.org/2000/svg" display="none">
         <symbol id="page-logo">
           <path fill-rule="evenodd"
                 d="M163.881,27.119 L163.881,34.511 L142.617,34.511 L142.617,0.911 L163.639,0.911 L163.639,8.303 L150.349,8.303 L150.349,13.871 L162.431,13.871 L162.431,21.167 L150.349,21.167 L150.349,27.119 L163.881,27.119 ZM124.010,27.695 C125.717,27.695 127.272,27.327 128.674,26.591 C130.075,25.855 131.130,24.847 131.839,23.567 L138.509,27.407 C137.059,29.807 135.045,31.703 132.468,33.095 C129.889,34.487 127.071,35.183 124.010,35.183 C118.951,35.183 114.755,33.511 111.420,30.167 C108.086,26.823 106.418,22.671 106.418,17.711 C106.418,12.751 108.086,8.599 111.420,5.255 C114.755,1.911 118.951,0.239 124.010,0.239 C127.038,0.239 129.841,0.935 132.419,2.327 C134.996,3.719 137.026,5.615 138.509,8.015 L131.839,11.855 C131.098,10.543 130.034,9.527 128.650,8.807 C127.264,8.087 125.717,7.727 124.010,7.727 C121.014,7.727 118.621,8.639 116.833,10.463 C115.045,12.287 114.151,14.703 114.151,17.711 C114.151,20.719 115.045,23.135 116.833,24.959 C118.621,26.783 121.014,27.695 124.010,27.695 ZM93.853,0.911 L101.586,0.911 L101.586,34.511 L93.853,34.511 L93.853,0.911 ZM69.593,34.511 L58.574,0.911 L67.031,0.911 L74.522,25.631 L82.013,0.911 L90.471,0.911 L79.452,34.511 L69.593,34.511 ZM35.376,0.911 L56.399,0.911 L56.399,8.303 L43.109,8.303 L43.109,13.871 L55.191,13.871 L55.191,21.167 L43.109,21.167 L43.109,27.119 L56.641,27.119 L56.641,34.511 L35.376,34.511 L35.376,0.911 ZM14.112,34.511 L0.580,34.511 L0.580,0.911 L14.112,0.911 C18.783,0.911 22.690,2.519 25.832,5.735 C28.973,8.951 30.544,12.943 30.544,17.711 C30.544,22.479 28.973,26.471 25.832,29.687 C22.690,32.903 18.783,34.511 14.112,34.511 ZM20.612,10.871 C18.952,9.159 16.786,8.303 14.112,8.303 L8.313,8.303 L8.313,27.119 L14.112,27.119 C16.786,27.119 18.952,26.263 20.612,24.551 C22.271,22.839 23.101,20.559 23.101,17.711 C23.101,14.863 22.271,12.583 20.612,10.871 Z"/>
@@ -512,7 +536,8 @@
           <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
         </symbol>
         <symbol id="cart" viewBox="0 0 12 12">
-          <path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
+          <path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/>
+          <path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
         </symbol>
       </svg>
     </div>
