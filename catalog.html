@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Девайс: Каталог</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header theme">
@@ -65,24 +65,29 @@
           <div class="main-nav__item container__half">
             <ul class="main-nav__list theme__list">
               <li class="main-nav__item main-nav__item--catalog">
-                <a href="catalog.html" class="main-nav__link main-nav__link--catalog theme__alt-title">Каталог товаров</a>
+                <a href="catalog.html" class="main-nav__link theme__alt-title">
+                  Каталог товаров
+                  <svg class="main-nav__link-icon" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="#272525" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/>
+                  </svg>
+                </a>
                 <ul class="dropdown theme__list theme__text page-header__wrapper">
                   <li class="dropdown__col">
                     <ul class="dropdown__row">
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Виртуальная реальность</a></li>
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Моноподы для селфи</a></li>
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Экшн-камеры</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Виртуальная реальность</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Моноподы для селфи</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Экшн-камеры</a></li>
                     </ul>
                   </li>
                   <li class="dropdown__col">
                     <ul class="dropdown__row">
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Фитнес-браслеты</a></li>
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Умные часы</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Фитнес-браслеты</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Умные часы</a></li>
                     </ul>
                   </li>
                   <li class="dropdown__col">
                     <ul class="dropdown__row">
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Квадрокоптеры</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Квадрокоптеры</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -154,35 +159,35 @@
                     <li class="filter__item">
                       <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-black" value="black" checked
-                               class="filter__input">
+                               class="filter__input visually-hidden">
                         <span class="filter__label filter__label--check">Черный</span>
                       </label>
                     </li>
                     <li class="filter__item">
                       <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-white" value="white"
-                               class="filter__input">
+                               class="filter__input visually-hidden">
                         <span class="filter__label filter__label--check">Белый</span>
                       </label>
                     </li>
                     <li class="filter__item">
                       <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-blue" value="blue" checked
-                               class="filter__input">
+                               class="filter__input visually-hidden">
                         <span class="filter__label filter__label--check">Синий</span>
                       </label>
                     </li>
                     <li class="filter__item">
                       <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-red" value="red" checked
-                               class="filter__input">
+                               class="filter__input visually-hidden">
                         <span class="filter__label filter__label--check">Красный</span>
                       </label>
                     </li>
                     <li class="filter__item">
                       <label class="filter__label-wrapper">
                         <input type="checkbox" name="color-pink" value="pink"
-                               class="filter__input">
+                               class="filter__input visually-hidden">
                         <span class="filter__label filter__label--check">Розовый</span>
                       </label>
                     </li>
@@ -194,14 +199,14 @@
                     <li class="filter__item">
                       <label class="filter__label-wrapper">
                         <input type="radio" name="Bluetooth" value="yes" checked
-                               class="filter__input">
+                               class="filter__input visually-hidden">
                         <span class="filter__label filter__label--radio">Есть</span>
                       </label>
                     </li>
                     <li class="filter__item">
                       <label class="filter__label-wrapper">
                         <input type="radio" name="Bluetooth" value="no"
-                               class="filter__input">
+                               class="filter__input visually-hidden">
                         <span class="filter__label filter__label--radio">Нет</span>
                       </label>
                     </li>
@@ -316,9 +321,11 @@
       <div class="page-footer__wrapper container  container--flex">
         <div class="container__half">
           <div class="page-logo">
-            <svg class="page-logo__image page-logo__image--footer" width="164px" height="36px">
-              <use xlink:href="#page-logo" x="0" y="0"></use>
-            </svg>
+            <a href="index.html" class="page-logo__link">
+              <svg class="page-logo__image  page-logo__image--footer" width="164px" height="36px">
+                <use xlink:href="#page-logo" x="0" y="0"></use>
+              </svg>
+            </a>
           </div>
         </div>
         <div class="container__half">

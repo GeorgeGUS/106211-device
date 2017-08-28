@@ -4,6 +4,7 @@ var popupWrapper = document.querySelector('.popup');
 var activePopup;
 var map = popupWrapper.querySelector('.map');
 var feedback = popupWrapper.querySelector('.feedback');
+var feedbackForm = feedback.querySelector('.feedback__form');
 var mapOpen = document.querySelector('.contacts__map-link');
 var feedbackOpen = document.querySelector('.contacts__btn');
 
@@ -15,17 +16,24 @@ var openPopup = function (evt) {
   } else if (target.contains('contacts__btn')) {
     activePopup = feedback;
   }
-  activePopup.classList.remove('hidden');
+
+  activePopup.classList.toggle('hidden');
+  activePopup.classList.remove('fade-out');
+  activePopup.classList.toggle('fade-in');
   activePopup.addEventListener('click', onCloseBtnClick);
-  popupWrapper.classList.remove('visually-hidden');
+  popupWrapper.classList.toggle('visually-hidden');
   document.addEventListener('keydown', onEscPress);
 };
 
 var closePopup = function () {
   activePopup.removeEventListener('click', onCloseBtnClick);
-  activePopup.classList.add('hidden');
-  activePopup = undefined;
-  popupWrapper.classList.add('visually-hidden');
+  activePopup.classList.toggle('fade-in');
+  activePopup.classList.add('fade-out');
+  setTimeout(function () {
+    activePopup.classList.toggle('hidden');
+    activePopup = undefined;
+    popupWrapper.classList.toggle('visually-hidden');
+  }, 300);
   document.removeEventListener('keydown', onEscPress);
 };
 
@@ -47,6 +55,18 @@ var onEscPress = function (evt) {
   }
 };
 
+var onFormSubmit = function (evt) {
+  var fields = evt.target.elements;
+  activePopup.classList.remove('shake');
+  if (!fields[1].value || !fields[2].value) {
+    evt.preventDefault();
+    feedbackForm.classList.remove('shake');
+    feedbackForm.offsetWidth;// for reflow
+    feedbackForm.classList.add('shake');
+  }
+};
+
 mapOpen.addEventListener('click', openPopup);
 feedbackOpen.addEventListener('click', openPopup);
+feedbackForm.addEventListener('submit', onFormSubmit);
 popupWrapper.addEventListener('click', onWrapperClick);

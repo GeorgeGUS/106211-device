@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header theme">
@@ -56,24 +56,29 @@
           <div class="main-nav__item container__half">
             <ul class="main-nav__list theme__list">
               <li class="main-nav__item main-nav__item--catalog">
-                <a href="catalog.html" class="main-nav__link main-nav__link--catalog theme__alt-title">Каталог товаров</a>
+                <a href="catalog.html" class="main-nav__link theme__alt-title">
+                  Каталог товаров
+                  <svg class="main-nav__link-icon" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="#272525" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/>
+                  </svg>
+                </a>
                 <ul class="dropdown theme__list theme__text page-header__wrapper">
                   <li class="dropdown__col">
                     <ul class="dropdown__row">
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Виртуальная реальность</a></li>
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Моноподы для селфи</a></li>
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Экшн-камеры</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Виртуальная реальность</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Моноподы для селфи</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Экшн-камеры</a></li>
                     </ul>
                   </li>
                   <li class="dropdown__col">
                     <ul class="dropdown__row">
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Фитнес-браслеты</a></li>
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Умные часы</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Фитнес-браслеты</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Умные часы</a></li>
                     </ul>
                   </li>
                   <li class="dropdown__col">
                     <ul class="dropdown__row">
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Квадрокоптеры</a></li>
+                      <li class="dropdown__item"><a href="catalog.html" class="dropdown__link">Квадрокоптеры</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -239,7 +244,7 @@
 
         <ul class="thumbnails__list theme__list">
           <li class="thumbnails__item">
-            <a href="#" class="thumbnails__link">
+            <a href="catalog.html" class="thumbnails__link">
               <div class="thumbnails__background">
                 <div class="thumbnails__image thumbnails__image-1"></div>
               </div>
@@ -247,7 +252,7 @@
             </a>
           </li>
           <li class="thumbnails__item">
-            <a href="#" class="thumbnails__link">
+            <a href="catalog.html" class="thumbnails__link">
               <div class="thumbnails__background">
                 <div class="thumbnails__image thumbnails__image-2"></div>
               </div>
@@ -255,7 +260,7 @@
             </a>
           </li>
           <li class="thumbnails__item">
-            <a href="#" class="thumbnails__link">
+            <a href="catalog.html" class="thumbnails__link">
               <div class="thumbnails__background">
                 <div class="thumbnails__image thumbnails__image-3"></div>
               </div>
@@ -263,7 +268,7 @@
             </a>
           </li>
           <li class="thumbnails__item">
-            <a href="#" class="thumbnails__link">
+            <a href="catalog.html" class="thumbnails__link">
               <div class="thumbnails__background">
                 <div class="thumbnails__image thumbnails__image-4"></div>
               </div>
@@ -271,7 +276,7 @@
             </a>
           </li>
           <li class="thumbnails__item">
-            <a href="#" class="thumbnails__link">
+            <a href="catalog.html" class="thumbnails__link">
               <div class="thumbnails__background">
                 <div class="thumbnails__image thumbnails__image-5"></div>
               </div>
@@ -279,7 +284,7 @@
             </a>
           </li>
           <li class="thumbnails__item">
-            <a href="#" class="thumbnails__link">
+            <a href="catalog.html" class="thumbnails__link">
               <div class="thumbnails__background">
                 <div class="thumbnails__image thumbnails__image-6"></div>
               </div>
@@ -496,13 +501,13 @@
           <div class="feedback__inputs">
             <div class="feedback__half">
               <label for="name" class="feedback__label">Ваше имя:</label>
-              <input type="text" name="feedback-name" id="name" class="feedback__input"
-                     placeholder="Представьтесь, пожалуйста" required>
+              <input type="text" name="feedback-name" id="name" class="feedback__input" required
+                     placeholder="Представьтесь, пожалуйста">
             </div>
             <div class="feedback__half">
               <label for="email" class="feedback__label">Ваш e-mail:</label>
               <input type="email" name="feedback-email" id="email" class="feedback__input"
-                     placeholder="Для отправки ответа" required>
+                     placeholder="Для отправки ответа">
             </div>
           </div>
           <label for="message" class="feedback__label">Текст письма:</label>
@@ -542,6 +547,6 @@
       </svg>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
